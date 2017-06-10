@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @licitacao.tipo %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @licitacao.data %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @licitacao.valor %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @licitacao.descricao %>
+</p>
+
+<%= link_to 'Edit', edit_licitacao_path(@licitacao) %> |
+<%= link_to 'Back', licitacaos_path %>

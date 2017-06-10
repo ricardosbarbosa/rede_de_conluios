@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Licitacaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Data</th>
+      <th>Valor</th>
+      <th>Descricao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @licitacaos.each do |licitacao| %>
+      <tr>
+        <td><%= licitacao.tipo %></td>
+        <td><%= licitacao.data %></td>
+        <td><%= licitacao.valor %></td>
+        <td><%= licitacao.descricao %></td>
+        <td><%= link_to 'Show', licitacao %></td>
+        <td><%= link_to 'Edit', edit_licitacao_path(licitacao) %></td>
+        <td><%= link_to 'Destroy', licitacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Licitacao', new_licitacao_path %>
